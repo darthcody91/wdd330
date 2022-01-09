@@ -12,7 +12,7 @@ function loadIndex() {
         const li = document.createElement("li");
         const href = document.createElement("a");
         href.setAttribute("href", li.url);
-        href.innerText = link.label;
+        href.innerText = li.label;
 
         li.appendChild(href);
         ol.appendChild(link);
