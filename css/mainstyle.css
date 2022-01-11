@@ -1,0 +1,14 @@
+h1 {
+    text-align: center;
+    color:red;
+}
+
+.contents {
+    display: flex;
+    justify-content: center;
+}
+
+ol {
+    list-style: square;
+}
+
