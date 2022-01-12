@@ -5,7 +5,10 @@ let links = [
 
      {label: "Week 2 Notes",
       url: "week2/index.html"
-    }
+    },
+
+    {label: "TEAM ACTIVITY 1",
+      url: "teamactivity1.html"}
   ]
          
 function loadIndex() {
