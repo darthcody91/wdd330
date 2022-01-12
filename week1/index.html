@@ -8,8 +8,69 @@
     <title>WDD 330 | WEEK 1</title>
 </head>
 <body>
+    <main>
     <h1>WEEK 1 NOTES</h1>
-    <img src="/week1/images/w1notes.png" alt = "notes">
-    <p> hello </p>
+    <h2>Doing Stuff with Web Things (Local Storage)</h2>
+    <p>"REMEMBERING USER'S INFO</p>
+    <ul>
+        <li> 1. How can I store data so it isn't lost when the application stops? </li>
+        <li> 2. How do I get data back into my application once it has been stored? </li>
+        <li> 3. What can I do to allow the user to communicate? </li>
+    </ul>
+    <p>-COMMUNICATION MUST BE BI-DIRECTIONAL ---> THE USER NEEDS SOME WAY TO SPEAK TO YOU.</p>
+    <p>-COMPUTERS ARE STUPID -> THEY CAN'T REMEMBER ANYTHING, UNLESS THE APPLICATION IS DESIGNED TO STORE WHAT IT HAS DONE.</p>
+    <p>*Reminder* OUTPUT is the information stored or shared with the USER. INPUT is anything coming in from where it was stored or anything the USER enters.</p>
+    <br>
+    <p>***Javascript Functions***</p>
+    <ul>
+        <li>Function goes in the  " { } " characters... " LET " or " CONST " tells the computer to create a variable.</li>
+        <li>When you want to get the user's input from any input or text area tag: you can use the special word "VALUE"</li>
+        <li>When you want to show something to the user: USE A "SECTION" and "INNERHTML"</li>
+        <li>---- Don't get them mixed up.</li>
+        <li>------------ INPUT/TEXTAREA = VALUE</li>
+        <li>------------ SECTION = InnerHTML</li>
+        <li>Using JS you can store any information you want to use later. ---- even if user refreshes page or goes to another site & comes back.</li>
+        <li>----- Using "localStorage" (to save content)</li>
+        <li>------- JS uses 'Key-Value' pairs. An example is KEY= TITLE OF MUSIC ----- VALUE= THE AUDIO FILE</li>
+        <li>  **Code Example**</li>
+        <li>-  function loadStory(){</li>
+        <li>---  let storyName = document.getElementById ("name_input").value</li>
+        <li>---  let storyHtml = localStorage.getItem(storyName)</li>
+        <li>---  document.getElementById("story_editor").value = storyHtml</li>
+        <li>-  }</li>
+    </ul>
+
+    <h2>SITEPOINT "MASTER MOBILE UX"</h2>
+    <p>-Lesson 1, Step 1----How to rewire your brain for mobile first UX</p>
+    <br>
+    <p>Joel Marsh - "IF YOU DESIGN FOR THE SMALLEST, LEAST POWERFUL DEVICE FIRST, THEN YOU WILL FOCUS ON CONTENT, AND YOUR CORE FUNCTIONALITY"</p>
+    <p>There was a paradigm shift...decline in desktop -> rise in mobile.</p>
+    <p>--- Huge range of devices (different screen sizes, and resoluctions)</p>
+    <p> EVERYTHING WE BUILD NEEDS TO BE VIEWABLE ACROSS ALL THESE DEVICES </p>
+    <br>
+    <p>DESKTOP COMPUTERS --- usually shared within a household environment ----- used by multiple people ---- replaced every 4-5 years</p>
+    <p>MOBILE | TABLET | WATCH ----- replaced under every 2 years....so many devices are available - essentially 1 or 2 per person in the household.</p>
+    <p> **** THIS SHIFT HAS CHANGED THE INTERNET TRAFFIC ****</p>
+    <p>The simple guideline is whatever you are doing, do mobile first! --- though most people are still designing with a desktop first mindset</p>
+    <br>
+    <p>RESPONSIVE IS NOT MOBILE FIRST</p>
+    <p>--- Responsive Retrofitting: Taking what you already have and making it WORK on mobile.</p>
+    <br>
+    <p>MOBILE IS THE NEW DESKTOP</p>
+    <p>--- Can be time consuming, but it gives a much better experience across all of your devices.</p>
+    <p>--- It addresses constraints on mobile devices like SIZE and BANDWIDTH.</p>
+    <p>--- Planning for the future and growth.</p>
+
+    <h2>Things to remember</h2>
+    <ul>
+        <li>Desktop sales have been declining since 2011</li>
+        <li>You don't see people with their heads in laptops</li>
+        <li>START SMALL & SCALE UP</li>
+        <li>-------- This ensures you are really concentrating on your content and functionality to make sure things are going to work well on those small devices</li>
+        <li>-------- Things tend to grow rather well</li>
+        <li>MOBILE IS NOT A FAD</li>
+        <li>Don't listen to what people have to say --- observe what they're doing and find a way to fill their needs as simply as possible.</li>
+    </ul>
+   </main>
 </body>
 </html>
