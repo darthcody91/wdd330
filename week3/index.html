@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function makeUser() {
+            return {
+                name: "(this is a code example from a part of the readings)",
+                ref() {
+                    return this;
+                }
+            };
+        }
+
+        let user = makeUser();
+
+        alert(user.ref().name); // this alerts the user with what I told the script to do
+
+        console.log(makeUser);
+    </script>
+    <title>WDD 330 | WEEK 1</title>
+</head>
+
+<body>
+    <main>
+        <h1>WEEK 3 NOTES</h1>
+
+        <h2>Object Methods, "this"</h2>
+        <p>- Functions that are stored in object properties are called "methods"</p>
+        <p>- Methods allow objects to "act" like [ object.doSomething() ]</p>
+        <p>- Methods can reference the object as [ this ]</p>
+        <p>- -- The value of [ this ] is defined at RUN-TIME.</p>
+        <p>- When a function is declared, it may use [ this ], but that [ this ] has no value UNTIL the function is
+            called.</p>
+        <p>- A function can be copied between objects.</p>
+        <p>- When a function is called in the "method" syntax: [ object.method() ], the value of [ this ] during the
+            call is [ object ].</p>
+
+        <br>
+
+        <h2> Ch5: Objects</h2>
+        <p>Everything in JS is either one of the six primitive data types or an object.</p>
+        <ul>Topics Covered in this chapter
+            <li>Object Literals</li>
+            <ul>
+                <li>An object literal is an object that created directly in the language by wrapping all it's properties
+                    and methods in " { } "</li>
+                <li>Each property is a key-value pair, SEPARATED by commas.</li>
+                <li>(EXAMPLE: const superman = { name: 'Cody' , hero: true, villain: false, allies: ['Batman',
+                    'Supergirl'] };</li>
+                <li>All objects are mutable at any time when a program is running. Properties and methods can be changes
+                    or removed - or created even if it was declared using "const"</li>
+            </ul>
+            <li>Adding properties to objects</li>
+            <li>Object methods</li>
+            <li>JSON</li>
+            <li>The [ MATH ] object</li>
+            <li>The [ DATE ] object</li>
+            <li>The [ RegExp ] object</li>
+        </ul>
+        <br>
+        <h2> Ch6: Document Object Model</h2>
+        <p>The DOM allows you to access elements of a webpage and enable interacion with the page by adding and removing elements, etc. </p>
+        <ul>Topics Covered in this chapter
+            <li>Intro to the DOM</li>
+            <li>Getting Elements</li>
+                <ul>
+                    <li>"getElementByid()"</li>
+                    <li>"createElement()"</li>
+                    <li>"appendChild()"</li>
+                </ul>
+            <li>Navigating the DOM</li>
+            <li>Getting and setting an element's attributes</li>
+            <li>Updating the DOM by creating dynamic markup</li>
+            <li>Changing the CSS of an element</li>
+        </ul>
+        <br>
+        <h2> Ch7: Events</h2>
+        <p>Events are another part of the DOM and they are what provides the link between the webpage and the user interactions...everytime a user interacts with a web page such as clicking on a link, pressing a key, or moving a mouse, an event occurs that our program can detect and then respond to.</p>
+        <ul>Topics Covered in this chapter
+            <li>Intro to events</li>
+                <ul>
+                   <li>"addEventListener" --- [ document.body.addEventListener("click", doSomething); ]</li>
+                   <li>The [ click ] event occurs when a user clicks with the mouse, presses the Enter key, or taps on the screen, making it a very useful all-round event covering many types of interaction</li>
+                </ul>
+            <li>Adding event listeners</li>
+                <ul>
+                    <li>The recommended way of dealing with events, and the current standard, is to use event listeners. </li>
+                </ul>
+            <li>The event object</li>
+            <li>Mouse, keyboard, and touch events</li>
+                <ul>
+                    <li>There are several types of events you can see the <a href="https://developer.mozilla.org/en-US/docs/Web/Events">full list of the Events page here</a>  </li>
+                    <li>Mouse Events ---- "click" | "mousedown" | "mouseup" | "mouseover" | "mouseover" | "mousemove"  </li>
+                    <li>This list is pretty big with mouse, keyboard and even touch....just look at the link</li>
+                </ul>
+            <li>Removing event listeners</li>
+            <li>Stopping default behavior</li>
+            <li>Event propagation</li>
+        </ul>
+
+
+    </main>
+</body>
+
+</html>
