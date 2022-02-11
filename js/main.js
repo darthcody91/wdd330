@@ -29,7 +29,7 @@ let links = [
       url: "W5/index.html"},
 
       {label: "TO-DO LIST APPLICATION",
-      url: "week5/todolist.html"} ,
+      url: "week5/todolist.html"}
 
   ]
          
