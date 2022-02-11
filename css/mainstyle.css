@@ -39,6 +39,16 @@ a:link , a:visited{
 
 @media only screen and (max-width: 600px) {
 
+    body{
+        margin: 20px;
+    }
 
+    h1 {
+        font-size: 3em;
+    }
 
+    ol {
+        font-size: 1.75em;
+        text-align: right;
+       }
 }
