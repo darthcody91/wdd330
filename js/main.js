@@ -23,7 +23,14 @@ let links = [
       url: "week4/index.html"},
 
       {label: "TEAM ACTIVITY W4",
-      url: "week4/W4ta04.html"}
+      url: "week4/W4ta04.html"},
+
+      {label: "TEAM ACTIVITY W5",
+      url: "W5/index.html"},
+
+      {label: "TO-DO LIST APPLICATION",
+      url: "week5/todolist.html"}
+
   ]
          
 function loadIndex() {
