@@ -35,7 +35,10 @@ let links = [
       url: "week7/index.html"},
 
       {label: "TEAM ACTIVITY W8",
-      url: "week8/teamact08.html"}
+      url: "week8/teamact08.html"},
+
+      {label: "Week 8 Notes",
+    url: "week8/index.html"}
 
   ]
          
