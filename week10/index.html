@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>W10 NOTES</title>
+</head>
+
+<body>
+  <main>
+    <h1>W10 Notes</h1>
+    <h3>MDN: Validating forms</h3>
+    <p>Client-side form validation</p>
+    <p>Client-side validation is an initial check and an important feature of good user experience; by catching invalid
+      data on the client-side, the user can fix it straight away. If it gets to the server and is then rejected, a
+      noticeable delay is caused by a round trip to the server and then back to the client-side to tell the user to fix
+      their data.</p>
+    <h3>What is form validation</h3>
+    <ul>
+      <li>When you go to a site, fill out a form but don't do it the way they want, you will usually get a message: "You
+        can't leave this blank" | "Please enter a valid email address"</li>
+      <li>Form Validation: hen you enter data, the browser and/or the web server will check to see that the data is in
+        the correct format and within the constraints set by the application. Validation done in the browser is called
+        client-side validation, while validation done on the server is called server-side validation.</li>
+      <li>We want filling out forms as easy as possible...however there are three reasons for validating forms:</li>
+      <ul>
+        <li>We want to get the right data in the right format</li>
+        <li>We want to protect our users' data</li>
+        <li>We want to protect ourselves</li>
+      </ul>
+      <li>There are two different types of client-side validation that you encounter on the web...built-in form
+        validation / javascript</li>
+      <li>Validation Attributes on form elements</li>
+      <ul>
+        <li>required</li>
+        <li>minlength & maxlength</li>
+        <li>min & max</li>
+        <li>type</li>
+        <li>pattern</li>
+      </ul>
+      <li>Another useful validation feature is the "pattern" attribute, which expects a REGULAR EXPRESSION as its value.
+      </li>
+      <ul>
+        <li>a — Matches one character that is a (not b, not aa, and so on).</li>
+        <li>abc — Matches a, followed by b, followed by c.</li>
+        <li>ab?c—Matches a, optionally followed by a single b, followed by c. ( ac or abc)</li>
+        <li>ab*c—Matches a, optionally followed by any number of bs, followed by c. ( ac , abc, abbbbbc, and so on).
+        </li>
+        <li>a|b — Matches one character that is a or b.</li>
+        <li>abc|xyz — Matches exactly abc or exactly xyz (but not abcxyz or a or y, and so on).</li>
+        <li>Example ---- "input id="choose" name="i_like" required pattern="[Bb]anana|[Cc]herry" </li>
+      </ul>
+      <li>validationMessage</li>
+      <li>validity ----- ValidityState </li>
+      <ul>
+        <li>patternMismatch</li>
+        <li>tooLong</li>
+        <li>tooShort</li>
+        <li>rangeOverflow</li>
+        <li>rangeUnderflow</li>
+        <li>typeMismatch</li>
+        <li>valid</li>
+        <li>valueMissing</li>
+      </ul>
+      <li>Summary:</li>
+      <li>Client-side form validation sometimes requires JavaScript if you want to customize styling and error messages,
+        but it always requires you to think carefully about the user. Always remember to help your users correct the
+        data they provide. To that end, be sure to:</li>
+      <ul>
+        <li>Display explicit error messages</li>
+        <li>Be permissive about the input format</li>
+        <li>Point out exactly where the error occurs, especially on large forms</li>
+        <li> - once you have checked that the form is filled out correctly, it can be resubmitted</li>
+      </ul>
+    </ul>
+    <h3>MDN: Fetch</h3>
+    <p>The Fetch API provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline, such as requests and responses. It also provides a global fetch() method that provides an easy, logical way to fetch resources asynchronously across the network.</p>
+    <ul>
+      <li>Uploading JSON data</li>
+      <li>--- Use "fetch()" to POST JSON-encoded data</li>
+      <li>Uploading a fiel</li>
+      <li>--- Files can be uploaded using an HTML [input type="file"] input element, [FormData() and fetch()]</li>
+    </ul>
+  </main>
+</body>
+
+</html>
