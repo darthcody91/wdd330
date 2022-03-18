@@ -50,7 +50,10 @@ let links = [
     url: "week10ta/ta10.html"},
 
     {label: "Week 10 Notes",
-    url: "week10/index.html"}
+    url: "week10/index.html"},
+
+    {label: "TEAM ACTIVITY W11",
+    url: "ta11/client/week11.js"}
 
   ]
          
