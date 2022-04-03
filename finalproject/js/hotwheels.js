@@ -1,61 +1,81 @@
+fetch("json/hotwheels.json")
+    .then((data) => data.json())
+    .then((hotwheels) => {
+        const randomNum = Math.floor(Math.random() * hotwheels.length);
+        const carRandom = hotwheels[randomNum];
 
-
-fetch('json/hotwheels.json')
-      .then(data => data.json())
-      .then(hotwheels => {
-          const randomNum = Math.floor(Math.random() * hotwheels.length)
-          const carRandom = hotwheels[randomNum]
-
-          //console.log(randomNum)
-          //console.log(carRandom.make)
-
-          function randomizer() {
+    
+        function randomizer() {
             let random = hotwheels[Math.floor(Math.random() * hotwheels.length)];
             model.innerText = `${random.model}`;
             make.innerText = random.make;
             number.innerText = random.number;
-          }
-          
-          randomizer();
-          
-          document.querySelector("button").addEventListener('click', randomizer)
+        }
 
+        randomizer();
 
-          let col = [];
-          for (let i = 0; i < hotwheels.length; i++) {
-              for (let key in hotwheels[i]) {
-                  if (col.indexOf(key) === -1) {
-                      col.push(key);
-                  }
-              }
-          }
-          
-          let table = document.createElement("table");
-             
-          let tr = table.insertRow(-1); 
-      
-          for (let i = 0; i < col.length; i++) {
-              let th = document.createElement("th"); 
-              th.innerHTML = col[i];
-              tr.appendChild(th);
-          }
-      
-          for (let i = 0; i < hotwheels.length; i++) {
-              tr = table.insertRow(-1);
-              for (let j = 0; j < col.length; j++) {
-                  let tabCell = tr.insertCell(-1);
-                  tabCell.innerHTML = hotwheels[i][col[j]];
-              }
-          }
-    
-          let divContainer = document.getElementById("showData");
-          divContainer.innerHTML = "";
-          divContainer.appendChild(table);
-
-       
-          
-              
-        });
-    
+        document.querySelector("button").addEventListener("click", randomizer);      
         
         
+
+
+    });
+
+
+
+ fetch('json/hotwheels.json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                appendData(data);
+            })
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
+    
+        function appendData(data) {
+           
+            let myTable = document.querySelector('#table');
+
+let headers = ['Make', 'Model', 'Year', 'Color', 'Code'];
+
+
+    let table = document.createElement('table');
+    table.className = "myTable";
+    let headerRow = document.createElement('tr');
+
+    headers.forEach(headerText => {
+        let header = document.createElement('th');
+        let textNode = document.createTextNode(headerText);
+        header.appendChild(textNode);
+        headerRow.appendChild(header);
+    });
+
+    table.appendChild(headerRow);
+
+    data.forEach(cars => {
+        let row = document.createElement('tr');
+
+        Object.values(cars).forEach(text => {
+            let cell = document.createElement('td');
+            let textNode = document.createTextNode(text);
+            cell.appendChild(textNode);
+            row.appendChild(cell);
+        })
+
+        table.appendChild(row);
+    })
+
+    myTable.appendChild(table);
+    
+
+        }
+    
+    ;
+
+
+   
+
+
+      
