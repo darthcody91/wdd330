@@ -74,8 +74,30 @@ let headers = ['Make', 'Model', 'Year', 'Color', 'Code'];
     
     ;
 
+  
+    const tablebutton = document.getElementById("showcarlist");
+    tablebutton.addEventListener("click", showtable);
+    
 
-   
+    function showtable() {
+        var x = document.getElementById("table");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
 
 
+      const carbutton = document.getElementById("showrandomcar");
+      carbutton.addEventListener("click", showrandom);
       
+  
+      function showrandom() {
+          var x = document.getElementById("randomcar");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        }
