@@ -5,3 +5,15 @@
 #randomcar {
     display: none;
 }
+
+.modelname {
+    color: blue;
+}
+
+.makename {
+    color: pink;
+}
+
+.carnumber {
+    color: green;
+}
