@@ -68,3 +68,15 @@ function showrandom() {
     x.style.display = "block";
   }
 }
+
+const listbutton = document.getElementById("listbutton");
+listbutton.addEventListener("click", showlist);
+
+function showlist() {
+  var x = document.getElementById("hwcarList");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
