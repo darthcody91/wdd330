@@ -1,20 +1,163 @@
-#table {
-    display: none;
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Istok+Web&family=Racing+Sans+One&display=swap');
+/*
+font-family: 'Bangers', cursive;
+font-family: 'Istok Web', sans-serif;
+font-family: 'Racing Sans One', cursive;
+*/
+
+/* styling for JS to work */
+html {
+    overflow-y: scroll;
 }
 
 
 #hwcarList {
     display: none;
+    grid-auto-columns: 1fr; 
+    grid-auto-rows: 1fr; 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr; 
+    gap: 0px 0px; 
 }
 
-.modelname {
-    color: blue;
+#randomcar {
+    display: none;
 }
 
-.makename {
-    color: pink;
+#listdetails {
+    display: none;
 }
 
-.carnumber {
-    color: green;
+
+
+/* main style */
+body {
+    margin: 100px 100px;
+    background-color:#0079be ;
+    text-align: center;
+    padding: 0;
+}
+
+h1 {
+    color: #FFF200;
+    font-family: 'Bangers', cursive;
+    letter-spacing: 5px;
+    font-size: 3em;
+    background-color: #ED1C24;
+    border: 4px solid #FFFFFF;
+    
+}
+
+#modelname {
+    color: #FFFFFF;
+    font-family: 'Istok Web', sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    margin: 0px;
+}
+#makename {
+    color: #FFFFFF;
+    font-family: 'Istok Web', sans-serif;
+    font-style: italic;
+    font-size: 1.5em;
+    margin: 0px;
+}
+#carnumber {
+    color: #FFFFFF;
+    font-family: 'Istok Web', sans-serif;
+    font-size: 1em;
+    margin: 0px;
+}
+
+ul {
+    list-style:none;
+    padding-left:0;
+}
+
+li {
+    list-style: none;
+}
+
+#listcard {
+    color: #FFFFFF;
+    font-family:'Istok Web', sans-serif;
+}
+
+#listmodel {
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+
+
+.pushable {
+    background: #FC4D0B;
+    border-radius: 12px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    margin: 10px;
+    font-family: 'Bangers', cursive;
+    letter-spacing: 2px;
+    
+  }
+  .front {
+    display: block;
+    padding: 12px 42px;
+    border-radius: 12px;
+    font-size: 1.75rem;
+    background: #FE6D17;
+    color: #FFFFFF;
+    transform: translateY(-6px);
+  }
+
+  .pushable:active .front {
+    transform: translateY(-2px);
+  }
+
+
+/* mobile specific style */
+@media only screen and (max-width: 600px) {
+
+    body{
+        margin: 100px 15px;
+        }
+
+    h1 {
+        font-size: 4em;
+        letter-spacing: 6px;
+    }
+
+    #hwcarList {
+    display: none;
+    grid-auto-columns: 1fr; 
+    grid-auto-rows: 1fr; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+    text-align: center;
+    }
+
+    #modelname {
+        font-size: 3em;
+        
+    }
+    #makename {
+        font-size: 2em;
+        }
+    #carnumber {
+        font-size: 1.5em;
+        
+    }
+
+    #listmodel {
+        font-weight: bold;
+        font-size: 1.75em;
+    }
+
+
+
+
+   
 }

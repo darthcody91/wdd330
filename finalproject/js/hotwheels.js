@@ -6,12 +6,12 @@ fetch((url = "json/hotwheels.json"))
 
     function randomizer() {
       let random = hotwheels[Math.floor(Math.random() * hotwheels.length)];
-      model.innerText = `${random.model}`;
+      model.innerText = random.model;
       make.innerText = random.make;
       number.innerText = random.number;
-      model.className = "modelname";
-      make.className = "makename";
-      number.className = "carnumber";
+      model.id = "modelname";
+      make.id = "makename";
+      number.id = "carnumber";
     }
 
     randomizer();
@@ -19,7 +19,7 @@ fetch((url = "json/hotwheels.json"))
     document.querySelector("button").addEventListener("click", randomizer);
   });
 
-// this is test code //
+// collection list//
 
 fetch(url)
   .then(function (response) {
@@ -30,12 +30,18 @@ fetch(url)
 
     const hotwheelcars = jsonObject;
     hotwheelcars.forEach((car) => {
-      let card = document.createElement("dl");
-      let model = document.createElement("dt");
-      let make = document.createElement("dd");
-      let number = document.createElement("dd");
-      let produced = document.createElement("dd");
-      let color = document.createElement("dd");
+      let card = document.createElement("div");
+      let model = document.createElement("ul");
+      let make = document.createElement("li");
+      let number = document.createElement("li");
+      let produced = document.createElement("li");
+      let color = document.createElement("li");
+      card.id = "listcard";
+      model.id = "listmodel";
+      make.className = "listdetails";
+      number.className = "listdetails";
+      produced.className = "listdetails";
+      color.className = "listdetails";
 
       make.innerHTML = `${car.make}`;
       model.innerHTML = `${car.model}`;
@@ -55,13 +61,14 @@ fetch(url)
 
 
 
+  
 
   
 const carbutton = document.getElementById("showrandomcar");
 carbutton.addEventListener("click", showrandom);
 
 function showrandom() {
-  var x = document.getElementById("randomcar");
+  let x = document.getElementById("randomcar");
   if (x.style.display === "block") {
     x.style.display = "none";
   } else {
@@ -73,10 +80,11 @@ const listbutton = document.getElementById("listbutton");
 listbutton.addEventListener("click", showlist);
 
 function showlist() {
-  var x = document.getElementById("hwcarList");
-  if (x.style.display === "block") {
+  let x = document.getElementById("hwcarList");
+  if (x.style.display === "grid") {
     x.style.display = "none";
   } else {
-    x.style.display = "block";
+    x.style.display = "grid";
   }
 }
+
