@@ -81,3 +81,5 @@ function showlist() {
     x.style.display = "grid";
   }
 }
+
+document.getElementById("copyrightyear").innerHTML = new Date().getFullYear();
