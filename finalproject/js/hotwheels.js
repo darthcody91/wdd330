@@ -1,14 +1,13 @@
 fetch((url = "json/hotwheels.json"))
   .then((data) => data.json())
   .then((hotwheels) => {
-    const randomNum = Math.floor(Math.random() * hotwheels.length);
-    const carRandom = hotwheels[randomNum];
+    const randomCar = Math.floor(Math.random() * hotwheels.length);
+    const carRandom = hotwheels[randomCar];
 
     function randomizer() {
-      let random = hotwheels[Math.floor(Math.random() * hotwheels.length)];
-      model.innerText = random.model;
-      make.innerText = random.make;
-      number.innerText = random.number;
+      model.innerText = carRandom.model;
+      make.innerText = carRandom.make;
+      number.innerText = carRandom.number;
       model.id = "modelname";
       make.id = "makename";
       number.id = "carnumber";
@@ -59,11 +58,6 @@ fetch(url)
     });
   });
 
-
-
-  
-
-  
 const carbutton = document.getElementById("showrandomcar");
 carbutton.addEventListener("click", showrandom);
 
@@ -87,4 +81,3 @@ function showlist() {
     x.style.display = "grid";
   }
 }
-
