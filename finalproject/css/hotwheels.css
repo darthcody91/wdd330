@@ -83,6 +83,7 @@ li {
 #listcard {
     color: #FFFFFF;
     font-family:'Istok Web', sans-serif;
+    height: 200px;
 }
 
 #listmodel {
@@ -90,7 +91,13 @@ li {
     font-size: 1.25em;
 }
 
+.listdetailsmake {
+    font-style: italic;
+}
 
+footer {
+    color: #FFF200;
+}
 
 .pushable {
     background: #FC4D0B;

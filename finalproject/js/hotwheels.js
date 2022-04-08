@@ -37,7 +37,7 @@ fetch(url)
       let color = document.createElement("li");
       card.id = "listcard";
       model.id = "listmodel";
-      make.className = "listdetails";
+      make.className = "listdetailsmake";
       number.className = "listdetails";
       produced.className = "listdetails";
       color.className = "listdetails";
